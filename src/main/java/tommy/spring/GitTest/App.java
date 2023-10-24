@@ -13,5 +13,6 @@ public class App
         System.out.println("Hyeonga world!!!!");
         System.out.println("Hyeonga world@@");
         System.out.println("MEA");
+        System.out.println("안녕하세요~~!!");
     }
 }
