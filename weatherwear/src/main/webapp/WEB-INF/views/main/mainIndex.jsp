@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link href="resources/client/css/style.css" rel="stylesheet" />
 <title>mainIndex.jsp</title>
-<!-- Style 태그는 head 태그 안에 있어야 합니다.-->
+
 </head>
 <body>
     <div id="container" >

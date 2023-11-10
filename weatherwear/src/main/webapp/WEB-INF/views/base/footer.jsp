@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <html>
 <footer>
+
 	<div id="footer">
 		<img src="resources/image/logo_footer.png" id="footer_logo">
 		<h5>[ div : footer ]</h5>

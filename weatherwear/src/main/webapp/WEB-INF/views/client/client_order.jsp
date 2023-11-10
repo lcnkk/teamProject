@@ -7,6 +7,7 @@
 <link href="resources/client/css/style.css" rel="stylesheet" />
 <link href="resources/client/css/orderStructure.css" type="text/css" rel="stylesheet" />
 <title>Insert title here</title>
+
 </head>
 <body>
 	<%@ include file="../base/header.jsp"%>

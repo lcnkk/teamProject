@@ -14,6 +14,7 @@
 </head>
 <body>
 	<%@ include file="../../base/header.jsp" %>
+	
 	<div id="product_content">
 	<c:choose>
 		<c:when test="${param.page == 'new'}">

@@ -9,7 +9,7 @@
 <link href="resources/client/css/style.css" rel="stylesheet" />
 <link href="resources/client/css/cartStructure.css" type="text/css" rel="stylesheet" />
 <title>client_cart.jsp</title>
-<!-- Style 태그는 head 태그 안에 있어야 합니다.-->
+
 <script type="text/javascript">
 	
 		//버튼으로 수량 변경
