@@ -4,7 +4,7 @@
 <footer>
 
 	<div id="footer">
-		<img src="resources/image/logo_footer.png" id="footer_logo">
+		<a href="login.mdo"><img src="resources/image/logo_footer.png" id="footer_logo"></a>
 		<h5>[ div : footer ]</h5>
 		<div id="content">
 			<br>
