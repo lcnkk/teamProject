@@ -12,5 +12,7 @@
 	
 	<a href="getSampleList.do">getSampleList.do</a><br><br>
 	<a href="insertSample.do">insertSample.do</a><br><br>
+	<a href="mainIndex.do">mainIndex.do</a><br><br>
+	<a href="product_new.do">product_new.do</a><br><br>
 </body>
 </html>
