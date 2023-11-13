@@ -1,20 +1,14 @@
 package com.w2.client.controller;
 
-import java.util.Locale;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-import jdk.jfr.Description;
 
 @Controller
 public class ClientController {
 	
-	@RequestMapping(value = "/")
-	@Description("메인 페이지")
-	public String root(Locale locale, Model model) {
+	@RequestMapping("/") 
+	public String mainIndex2() {
+		System.out.println("[ ClientController ] : mainIndex");
 		return "client/mainIndex";
 	}
 	
