@@ -2232,3 +2232,8 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2023-11-14 13:18:11.288
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.resources 2 2 2023-11-14 13:23:09.709
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2023-11-14 13:23:09.709
+!MESSAGE The project description file (.project) for 'Servers' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
