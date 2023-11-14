@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- MyBatis 다운 파일 PDF 에서 붙여넣은 내용입니다. -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+				"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+				
+<mapper namespace="ClientDAO">
+	<!-- -->
+	<resultMap type="com.w2.client.ClientVO" id="client">
+		<id property="clientId" column="cId" />
+		<result property="clientPwd" column="cPwd" />
+		<result property="clientName" column="cName" />
+		<result property="clientNum" column="cNum" />
+		<result property="clientEmail" column="cEmail" />
+		<result property="clientEmailCheck" column="cEmailCheck" />
+		<result property="clientRecId" column="cRecId" />
+		<result property="clientBirth" column="cBirth" />
+		<result property="clientNickName" column="cNickName" />
+		<result property="gradeId" column="grId" />
+		<result property="clientPoint" column="cPoint" />
+	</resultMap>
+	 
+	<!-- 아이디 중복 확인 -->
+	<select id="idCheck" resultType="int">
+		SELECT count(*) FROM client WHERE cId=#{ clientId }
+	</select>
+	
+	<!-- 닉네임 중복 확인 -->
+	<select id="nicCheck" resultType="String">
+		SELECT cId FROM client WHERE cNicName=#{ clientNickName }
+	</select>
+	
+	<!-- 회원 가입 -->
+	<insert id="insertClient">
+		INSERT INTO client(cId, cPwd, cName, cNum, cEmail, cEmailCheck, cRecId, cBirth, cNickName, grId, cPoint)
+		VALUES(#{ clientId }, #{ clientPwd }, #{ clientName }, #{ clientNum }, #{ clientEmail }, #{ clientEmailCheck }, #{ clientRecId }, #{ clientBirth }, #{ clientNickName }, #{ gradeId }, #{ clientPoint })
+	</insert>
+	
+	<!-- 로그인 요청 -->
+	<select id="loginClient" resultMap="client">
+		SELECT * FROM client WHERE cId=#{ clientId } AND cPwd=#{ clientPwd }
+	</select>
+	
+	
+</mapper>
