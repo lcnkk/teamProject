@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	<!-- 스프링 프레임워크에서 빈을 등록하기 위해 사용합니다.  -->
+	<context:component-scan	base-package="com.w2.sample"></context:component-scan>
+
+	<!-- MyBatis 연동 : 추가한 라이브러리에서 가져오는 SqlSessionFactoryBean -->
+	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:mybatis-config.xml" />
+	</bean>
+	
+	
+	<!-- SqlSessionTemplate을 사용하여 DAO 클래스 구현 -->
+		<!-- setter 메소드가 없으므로 생성자 인젝션을 사용해야 합니다. -->
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sessionFactory" />
+	</bean>
+</beans>
